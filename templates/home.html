@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Deteksi Penipuan E-Wallet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Deteksi Penipuan Transaksi E-Wallet</h1>
+        <form method="POST" action="{{ url_for('predict') }}" class="form-box">
+            <label for="amount">Jumlah Transaksi (amount):</label>
+            <input type="text" id="amount" name="amount" required>
+
+            <label for="transaction_type">Jenis Transaksi (0 = Cash Out, 1 = Transfer):</label>
+            <input type="text" id="transaction_type" name="transaction_type" required>
+
+            <label for="oldbalanceOrg">Saldo Awal Pengirim (oldbalanceOrg):</label>
+            <input type="text" id="oldbalanceOrg" name="oldbalanceOrg" required>
+
+            <label for="newbalanceOrig">Saldo Akhir Pengirim (newbalanceOrig):</label>
+            <input type="text" id="newbalanceOrig" name="newbalanceOrig" required>
+
+            <label for="oldbalanceDest">Saldo Awal Penerima (oldbalanceDest):</label>
+            <input type="text" id="oldbalanceDest" name="oldbalanceDest" required>
+
+            <label for="newbalanceDest">Saldo Akhir Penerima (newbalanceDest):</label>
+            <input type="text" id="newbalanceDest" name="newbalanceDest" required>
+
+            <button type="submit">Prediksi</button>
+        </form>
+    </div>
+</body>
+</html>

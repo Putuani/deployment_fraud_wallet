@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Prediksi</h1>
+        <div class="result-box">
+            <p class="result-text">{{ result }}</p>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="{{ url_for('home') }}">← Kembali ke Form</a>
+        </div>
+    </div>
+</body>
+</html>
